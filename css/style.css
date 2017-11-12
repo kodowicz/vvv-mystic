@@ -1,0 +1,512 @@
+/* VVV Mystic */
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Oswald:400,700&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
+
+:root {
+  --nav-color: #fff;
+  --nav-opened: #262626;
+}
+
+
+html {
+  font-size: 62.5%;
+}
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 1.6rem;
+  font-family: 'Lato', sans-serif;
+
+  background: url("../images/background.png")
+    no-repeat center center fixed;
+  background-size: cover;
+
+
+  /*font-family: 'Open Sans', sans-serif;*/
+  color: rgb(55, 70, 80)
+}
+
+/*  -----------  header  -----------  */
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 1.5rem;
+  padding-bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  fill: var(--nav-color)
+}
+.header__logo {
+  fill: var(--nav-color)
+}
+.header__logo--icon {
+  width: 19.9rem;
+  height: 5.85rem
+}
+
+.header__nav-list {
+  width: 100%
+}
+.header__nav-list-items {
+  display: none;
+  padding: 0 10vw;
+}
+.header__nav-list-items li {
+  list-style: none;
+  text-align: center;
+  line-height: 2.5;
+  border-bottom: 1px solid #E8EDFA;
+}
+.header__nav-list-items li:last-child {
+  border: none;
+}
+.header__nav-list-items a {
+  text-decoration: none;
+  color: var(--nav-opened);
+  font-size: 1.8rem;
+  display: block
+}
+.header__nav-list-items a:hover {
+  color: #16379C
+}
+
+.header__nav-button {
+  border: none;
+  background: none;
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+.header__nav-button:hover {
+  outline: none
+}
+.header__nav-button--hamburger-icon {
+  width: 3.3rem;
+  height: 3.3rem
+}
+.header__nav-button--close-icon {
+  width: 2rem;
+  height: 2rem;
+  display: none
+}
+
+/*  ---  navigation opened  ---  */
+.header.nav-opened {
+  background: #F2FAFC;
+  box-shadow: 0 0 1rem var(--nav-opened);
+  fill: var(--nav-opened)
+}
+
+.header.nav-opened .header__logo {
+  fill: var(--nav-opened)
+}
+
+.header.nav-opened .header__nav-list-items {
+  display: block
+}
+
+.header.nav-opened .header__nav-button--hamburger-icon {
+  display: none
+}
+.header.nav-opened .header__nav-button--close-icon {
+  display: block
+}
+
+@media (min-width: 576px) {
+  .header__nav-list-items li {
+    border-color: #F2FAFC
+  }
+}
+@media (min-width: 768px) {
+  .header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    fill: var(--nav-color)
+  }
+  .header__logo {
+    fill: var(--nav-color)
+  }
+  .header__logo--icon {
+    width: 19.9rem;
+    height: 5.85rem
+  }
+
+  .header__nav-list {
+    width: 100%
+  }
+  .header__nav-list-items {
+    display: none;
+    padding: 0 10vw;
+  }
+  .header__nav-list-items li {
+    list-style: none;
+    text-align: center;
+    line-height: 2.5;
+    border-bottom: 1px solid #E8EDFA;
+  }
+  .header__nav-list-items li:last-child {
+    border: none;
+  }
+  .header__nav-list-items a {
+    text-decoration: none;
+    color: var(--nav-opened);
+    font-size: 1.8rem;
+    display: block
+  }
+  .header__nav-list-items a:hover {
+    color: #16379C
+  }
+
+  .header__nav-button {
+    border: none;
+    background: none;
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center
+  }
+  .header__nav-button:hover {
+    outline: none
+  }
+  .header__nav-button--hamburger-icon {
+    width: 3.3rem;
+    height: 3.3rem
+  }
+  .header__nav-button--close-icon {
+    width: 2rem;
+    height: 2rem;
+    display: none
+  }
+
+  /*  ---  navigation opened  ---  */
+  .header.nav-opened {
+    background: #F2FAFC;
+    box-shadow: 0 0 1rem var(--nav-opened);
+    fill: var(--nav-opened)
+  }
+
+  .header.nav-opened .header__logo {
+    fill: var(--nav-opened)
+  }
+
+  .header.nav-opened .header__nav-list-items {
+    display: block
+  }
+
+  .header.nav-opened .header__nav-button--hamburger-icon {
+    display: none
+  }
+  .header.nav-opened .header__nav-button--close-icon {
+    display: block
+  }
+
+}
+@media (min-width: 992px) {
+
+}
+@media (min-width: 1200px) {
+  .header {
+    width: 90vw;
+    position: fixed;
+    top: 1.5rem;
+    left: 5vw;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between
+  }
+}
+
+
+
+/*  -----------  main-content  -----------  */
+.main-content {
+  margin-top: 100vh;                 /* fix it */
+}
+.main-content section {
+  background: rgba(240, 240, 240, .8);
+  border-radius: .5rem;
+  text-align: center;
+
+  width: 80vw;
+  margin: 0 auto;
+  padding: 7rem 2rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+.about-us {
+  display: flex;
+}
+.about-us-item {
+  box-sizing: border-box;
+  width: 33.33%;
+  padding: 0 4rem;
+}
+.about-us-item h2 {
+  display: inline-block;
+  font-size: 2.8rem;
+
+  padding-bottom: .5rem;
+  border-bottom: 2px solid rgba(0, 140, 240, .5);
+}
+.about-us-item p {
+  text-align: justify;
+  margin: 0;
+}
+
+.pokeball, .greatball, .ultraball {
+  width: 12rem;
+  height: 12rem;
+  border-radius: 50%;
+  border: -1px solid transparent;
+  box-shadow: inset -6px -6px 15px 0px #000;
+  margin: 0 auto;
+}
+.pokeball {
+  background: url('../images/pokeball_icon.png')
+    center center no-repeat;
+  background-size: contain;
+}
+.greatball {
+  background: url('../images/greatball_icon.png')
+    center center no-repeat;
+  background-size: cover;
+}
+.ultraball {
+  background: url('../images/ultraball_icon.png')
+    center center no-repeat;
+  background-size: cover;
+}
+
+
+
+/*  -----------  contact  -----------  */
+.contact {
+}
+.contact h2 {
+  display: inline-block;
+  margin-top: 0;
+  padding-bottom: .5rem;
+  border-bottom: 2px solid rgba(0, 140, 240, .5);
+}
+.contact > p {
+  text-align: justify;
+  padding: 0 4rem;
+}
+.contact > .invitation-discord {
+  text-align: center;
+}
+
+.discord-contact-admins, .discord-contact-mods {
+  display: flex;
+  justify-content: space-around;
+}
+.discord-contact-admins {
+  width: 70%;
+  margin: 0 auto;
+}
+.discord-contact-mods {
+  width: 50%;
+  margin: 0 auto;
+}
+.discord-contact {
+  margin: 0;
+}
+.discord-contact img {
+  width: 5rem;
+  border-radius: 50%;
+  box-shadow:  0 0 10px rgb(0,0,0);
+}
+.nick {
+  margin: 0;
+  font-size: 1rem;
+  color: rgb(100, 120, 130);
+}
+
+
+/*  -----------  media queries  -----------  */
+  /* everything above is for min-width < 576px */
+@media (min-width: 576px) { … }
+@media (min-width: 768px) { … }
+@media (min-width: 992px) { … }
+@media (min-width: 1200px) { … }
+
+
+
+/* SCSS */
+
+/*
+html {
+  font-size: 62.5%;
+
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 1.6rem;
+  font-family: 'Lato', sans-serif;
+
+  background: url("../images/background.png")
+    no-repeat center center fixed;
+  background-size: cover;
+
+
+  /*font-family: 'Open Sans', sans-serif;*
+  color: rgb(55, 70, 80);
+}
+
+/*  -----------  navigation  -----------  *
+.page-header {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 7rem;
+  background: rgba(0,0,0,.3);
+  text-align: center;
+
+  .page-logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 3rem;
+    color: white;
+    padding: 1rem 0;
+    text-decoration: none;
+    border-bottom: 2px solid rgba(50,50,50,1);
+
+  }
+
+  .nav-menu {
+    display: none;
+
+    .hamburger {
+      position: absolute;
+      top: 0; right: 0;
+      border: 0;
+      background: 0;
+
+      .hamburger-icon {
+        font-size: 2.5rem;
+        padding: 1rem;
+      }
+
+      .close-icon {
+        display: none;
+      }
+    }
+  }
+}
+
+/*  ---  navigation opened  ---  */
+
+
+/*  -----------  main-content  -----------  *
+.main-content {
+  margin-top: 100vh;                 /* fix it *
+
+  section {
+    background: rgba(240, 240, 240, .8);
+    border-radius: .5rem;
+    text-align: center;
+    width: 80vw;
+    margin: 0 auto;
+    padding: 7rem 2rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .about-us {
+    display: flex;
+
+    .about-us-item {
+      box-sizing: border-box;
+      width: 33.33%;
+      padding: 0 4rem;
+
+      .about-us-item h2 {
+        display: inline-block;
+        font-size: 2.8rem;
+        padding-bottom: .5rem;
+        border-bottom: 2px solid rgba(0, 140, 240, .5);
+      }
+      .about-us-item p {
+        text-align: justify;
+        margin: 0;
+      }
+
+      .pokeball,
+      .greatball,
+      .ultraball {
+        width: 12rem;
+        height: 12rem;
+        border-radius: 50%;
+        border: -1px solid transparent;
+        box-shadow: inset -6px -6px 15px 0px #000;
+        margin: 0 auto;
+      }
+
+      .pokeball {
+        background: url('../images/pokeball_icon.png')
+          center center no-repeat;
+        background-size: contain;
+      }
+      .greatball {
+        background: url('../images/greatball_icon.png')
+          center center no-repeat;
+        background-size: cover;
+      }
+      .ultraball {
+        background: url('../images/ultraball_icon.png')
+          center center no-repeat;
+        background-size: cover;
+      }
+    }
+  }
+
+
+  /*  -----------  contact  -----------  *
+  .contact {
+
+    .contact h2 {
+      display: inline-block;
+      margin-top: 0;
+      padding-bottom: .5rem;
+      border-bottom: 2px solid rgba(0, 140, 240, .5);
+    }
+
+    .contact > p {
+      text-align: justify;
+      padding: 0 4rem;
+    }
+
+    .contact > .invitation-discord {
+      text-align: center;
+    }
+
+  }
+}
+
+*/
