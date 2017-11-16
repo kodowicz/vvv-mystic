@@ -3,6 +3,11 @@
 @import url('https://fonts.googleapis.com/css?family=Oswald:400,700&subset=latin-ext');
 @import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Yantramanav:300,400,700&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre:300,400,700&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700&subset=latin-ext');
 
 :root {
   --nav-color: #fff;
@@ -16,8 +21,7 @@ html {
 * {
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  outline: none;
+  -moz-box-sizing: border-box
 }
 
 body {
@@ -29,9 +33,6 @@ body {
   background: url("../images/background.png")
     no-repeat center center fixed;
   background-size: cover;
-
-
-  /*font-family: 'Open Sans', sans-serif;*/
   color: rgb(55, 70, 80)
 }
 
@@ -42,20 +43,45 @@ body {
   top: 0;
   left: 0;
   padding: 1.5rem;
-  padding-bottom: 0;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  fill: var(--nav-color)
-}
-.header__logo {
-  fill: var(--nav-color)
-}
-.header__logo--icon {
-  width: 19.9rem;
-  height: 5.85rem
+  fill: var(--nav-color);
+  transition: all .3s ease-in;
 }
 
+.header__logo {
+  height: 3rem;
+  fill: var(--nav-color)
+}
+
+.header__logo--icon {
+  width: 17.91rem;
+  height: 5.265rem
+}
+
+.header__nav-button {
+  border: none;
+  background: none;
+  width: 3.0rem;
+  height: 3.0rem;
+  padding: 0rem 0rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+.header__nav-button:hover {
+  outline: none
+}
+.header__nav-button--hamburger-icon {
+  width: 2.5rem;
+  height: 3.3rem
+}
+.header__nav-button--close-icon {
+  width: 2rem;
+  height: 2rem;
+  display: none
+}
 .header__nav-list {
   width: 100%
 }
@@ -80,28 +106,6 @@ body {
 }
 .header__nav-list-items a:hover {
   color: #16379C
-}
-
-.header__nav-button {
-  border: none;
-  background: none;
-  width: 4rem;
-  height: 4rem;
-  display: flex;
-  justify-content: center;
-  align-items: center
-}
-.header__nav-button:hover {
-  outline: none
-}
-.header__nav-button--hamburger-icon {
-  width: 3.3rem;
-  height: 3.3rem
-}
-.header__nav-button--close-icon {
-  width: 2rem;
-  height: 2rem;
-  display: none
 }
 
 /*  ---  navigation opened  ---  */
@@ -134,105 +138,88 @@ body {
 @media (min-width: 768px) {
   .header {
     width: 100%;
+    height: 50px;
     position: fixed;
     top: 0;
     left: 0;
-    padding: 1.5rem;
+    padding: 0 1.8rem;
     display: flex;
     justify-content: space-between;
-    fill: var(--nav-color)
+    align-items: center;
   }
+
   .header__logo {
-    fill: var(--nav-color)
+    height: 4rem;
+    padding-top: 0.5rem;
   }
   .header__logo--icon {
-    width: 19.9rem;
-    height: 5.85rem
+    width: 15.92rem;
+    height: 4.68rem;
   }
-
   .header__nav-list {
-    width: 100%
+    width: 65vw;
   }
   .header__nav-list-items {
-    display: none;
-    padding: 0 10vw;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
   }
   .header__nav-list-items li {
-    list-style: none;
-    text-align: center;
-    line-height: 2.5;
-    border-bottom: 1px solid #E8EDFA;
+    border: none;
+    padding: 0 0.9rem
   }
   .header__nav-list-items li:last-child {
-    border: none;
+    padding-right: 0
   }
   .header__nav-list-items a {
-    text-decoration: none;
-    color: var(--nav-opened);
-    font-size: 1.8rem;
-    display: block
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.5rem;
+    color: white;
   }
   .header__nav-list-items a:hover {
-    color: #16379C
+    color: #A1A6C4
   }
-
   .header__nav-button {
-    border: none;
-    background: none;
-    width: 4rem;
-    height: 4rem;
-    display: flex;
-    justify-content: center;
-    align-items: center
-  }
-  .header__nav-button:hover {
-    outline: none
-  }
-  .header__nav-button--hamburger-icon {
-    width: 3.3rem;
-    height: 3.3rem
-  }
-  .header__nav-button--close-icon {
-    width: 2rem;
-    height: 2rem;
     display: none
   }
-
-  /*  ---  navigation opened  ---  */
-  .header.nav-opened {
-    background: #F2FAFC;
-    box-shadow: 0 0 1rem var(--nav-opened);
-    fill: var(--nav-opened)
+  /* scrolled page */
+  .header.scrolled {
+    background: rgba(0,0,0,0.7);
+    box-shadow: 0 0 10px black;
+    height: 5rem;
   }
-
-  .header.nav-opened .header__logo {
-    fill: var(--nav-opened)
+  .header {
+    height: 6rem;
   }
-
-  .header.nav-opened .header__nav-list-items {
-    display: block
+  .header__logo--icon {
+    width: 15.92rem;
+    height: 4.68rem;
   }
-
-  .header.nav-opened .header__nav-button--hamburger-icon {
-    display: none
+  .head.scrolled .header__logo--icon {
+    width: 15.92rem;
+    height: 4.68rem;
   }
-  .header.nav-opened .header__nav-button--close-icon {
-    display: block
+  .header__nav-list-items a {
+    font-size: 1.7rem;
+    color: white;
   }
-
+  .header.scrolled .header__nav-list-items a {
+    font-size: 1.5rem;
+    color: white;
+  }
 }
 @media (min-width: 992px) {
-
+  .header__nav-list {
+    width: 60vw;
+  }
 }
 @media (min-width: 1200px) {
-  .header {
-    width: 90vw;
-    position: fixed;
-    top: 1.5rem;
-    left: 5vw;
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between
+  .header__nav-list {
+    width: 55vw;
+  }
+  .header__nav-list-items a {
+    font-size: 1.6rem;
   }
 }
 
@@ -241,6 +228,9 @@ body {
 /*  -----------  main-content  -----------  */
 .main-content {
   margin-top: 100vh;                 /* fix it */
+}
+h2, h3 {
+  font-family: 'RalewLatoay', sans-serif;
 }
 .main-content section {
   background: rgba(240, 240, 240, .8);
@@ -266,7 +256,6 @@ body {
   font-size: 2.8rem;
 
   padding-bottom: .5rem;
-  border-bottom: 2px solid rgba(0, 140, 240, .5);
 }
 .about-us-item p {
   text-align: justify;
@@ -306,7 +295,6 @@ body {
   display: inline-block;
   margin-top: 0;
   padding-bottom: .5rem;
-  border-bottom: 2px solid rgba(0, 140, 240, .5);
 }
 .contact > p {
   text-align: justify;
