@@ -1,15 +1,15 @@
-/* ----- navigation ----- */
-const navButton = document.querySelector('.header__nav-button');
-navButton.addEventListener('click', function() {
-  const header = document.querySelector('.header');
-  const hamburgerBtn = document.querySelector('.header__nav-button--hamburger-icon');
-  const closeBtn = document.querySelector('.header__nav-button--close-icon');
-  header.classList.toggle('nav-opened');
-})
-
-
-
 document.addEventListener('DOMContentLoaded', function () {
+
+  /* ----- navigation ----- */
+  const navButton = document.querySelector('.header__nav-button');
+  navButton.addEventListener('click', function() {
+    const header = document.querySelector('.header');
+    const navList = header.querySelector('.header__nav-list-items');
+
+    header.classList.toggle('nav-opened');
+    navList.style.display = navList.style.display === 'none' ?
+      'block' : 'none';
+  })
 
   /* scrolling navigation */
   window.onscroll = function() {

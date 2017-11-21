@@ -118,11 +118,11 @@ body {
 .header.nav-opened .header__logo {
   fill: var(--nav-opened)
 }
-
-.header.nav-opened .header__nav-list-items {
+/*
+.header__nav-list-items.nav-list--display {
   display: block
 }
-
+*/
 .header.nav-opened .header__nav-button--hamburger-icon {
   display: none
 }
@@ -193,8 +193,8 @@ body {
     height: 6rem;
   }
   .header__logo--icon {
-    width: 15.92rem;
-    height: 4.68rem;
+    width: 17.214rem; /* 95%*/
+    height: 5.197rem; /* 95%*/
   }
   .head.scrolled .header__logo--icon {
     width: 15.92rem;
