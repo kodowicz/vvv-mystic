@@ -5,10 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
   navButton.addEventListener('click', function() {
     const header = document.querySelector('.header');
     const navList = header.querySelector('.header__nav-list-items');
-
     header.classList.toggle('nav-opened');
-    navList.style.display = navList.style.display === 'none' ?
-      'block' : 'none';
   })
 
   /* scrolling navigation */

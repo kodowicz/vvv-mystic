@@ -118,11 +118,11 @@ body {
 .header.nav-opened .header__logo {
   fill: var(--nav-opened)
 }
-/*
-.header__nav-list-items.nav-list--display {
+
+.header.nav-opened .header__nav-list-items {
   display: block
 }
-*/
+
 .header.nav-opened .header__nav-button--hamburger-icon {
   display: none
 }
