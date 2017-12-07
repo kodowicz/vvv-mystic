@@ -1,13 +1,6 @@
 /* VVV Mystic */
-@import url('https://fonts.googleapis.com/css?family=Lato');
-@import url('https://fonts.googleapis.com/css?family=Oswald:400,700&subset=latin-ext');
-@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700');
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
-@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700&subset=latin-ext');
-@import url('https://fonts.googleapis.com/css?family=Yantramanav:300,400,700&subset=latin-ext');
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&subset=latin-ext');
-@import url('https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre:300,400,700&subset=latin-ext');
-@import url('https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Lato|Quicksand|Yantramanav|Montserrat|Raleway|Open+Sans|Oswald|Frank+Ruhl+Libre:300,400,700&subset=latin-ext');
+
 
 :root {
   --nav-color: #fff;
@@ -46,8 +39,7 @@ body {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  fill: var(--nav-color);
-  transition: all .3s ease-in;
+  fill: var(--nav-color)
 }
 
 .header__logo {
@@ -146,6 +138,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: all .3s ease-in;
   }
 
   .header__logo {
@@ -185,7 +178,7 @@ body {
   }
   /* scrolled page */
   .header.scrolled {
-    background: rgba(0,0,0,0.7);
+    background: rgba(0,0,0,0.85);
     box-shadow: 0 0 10px black;
     height: 5rem;
   }
